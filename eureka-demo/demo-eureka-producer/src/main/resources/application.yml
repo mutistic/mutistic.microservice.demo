@@ -1,0 +1,36 @@
+server:
+  port: 12000
+  servlet:
+    context-path: /demo/eureka/producer
+
+# spring 配置
+spring:
+  # 项目配置
+  application:
+    name: @artifactId@
+    version: @version@
+#    description: @description@
+
+eureka:
+  # 指定服务实例
+  server:
+    ip: 127.0.0.1
+    port: 13000
+    path: /demo/eureka/server
+    eureka: /eureka/
+  # 设置实例
+  instance:
+    # 设置实例名
+    hostname: ${spring.application.name}
+    # 是否可以跨域访问 <true-可以, false-不可以> <默认:false>
+    prefer-ip-address: true
+  # 设置客户端
+  client:
+    # 是否向服务注册中心注册自己 <true-注册, false-不注册> <默认:true>
+    register-with-eureka: true
+    # 是否检索服务 <true-检索, false-不检索> <默认:true>
+    fetch-registry: true
+    # 服务注册中心的配置内容，指定服务注册中心位置, <数据结构map>
+    service-url:
+      # 默认节点: <key=defaultZone> <value=http://${eureka.server.ip}:${eureka.server.port}/${eureka.server.path}/${eureka.server.eureka}>
+      defaultZone: http://${eureka.server.ip}:${eureka.server.port}${eureka.server.path}${eureka.server.eureka}
