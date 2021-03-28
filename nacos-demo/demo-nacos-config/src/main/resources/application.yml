@@ -1,0 +1,25 @@
+server:
+  port: 13010
+  servlet:
+    context-path: /demo/nacos/config
+
+# spring 配置
+spring:
+  # 项目配置
+  application:
+    name: @artifactId@
+    version: @version@
+  #    description: @description@
+#  cloud:
+#    nacos:
+#      config:
+#        refresh-enabled: true
+#      discovery:
+#        server-addr: 127.0.0.1:13000
+#  main:
+#    allow-bean-definition-overriding: true
+
+test:
+  user:
+    name: DEMO_NACOS_CONFIG
+    age: 17

@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active:
+  application:
+    name: DEMO_YAML
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:13000
+      config:
+        refresh-enabled: true
+        server-addr: 127.0.0.1:13000
+        namespace: public
+        group: DEFAULT_GROUP
+        name: DEMO_YAML
+        prefix: DEMO_YAML
+        file-extension: yaml
+
+#nacos:
+#  cmdb:
+#    dumpTaskInterval: 10000
+#    eventTaskInterval: 10000
+#    labelTaskInterval: 10000
+
+#  main:
+#    allow-bean-definition-overriding: true
+
+test:
+  user:
+    name: DEMO_BOOTSRAP
+    age: 16
