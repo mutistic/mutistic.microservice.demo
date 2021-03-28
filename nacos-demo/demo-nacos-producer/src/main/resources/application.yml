@@ -1,0 +1,23 @@
+server:
+  port: 12010
+  servlet:
+    context-path: /demo/nacos/producer
+
+# spring 配置
+spring:
+  # 项目配置
+  application:
+    name: @artifactId@
+    version: @version@
+#    description: @description@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:13000
+
+
+#management:
+#  endpoint:
+#    web:
+#      exposure:
+#        include: *
