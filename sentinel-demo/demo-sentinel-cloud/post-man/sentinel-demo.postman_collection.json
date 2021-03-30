@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "02ad1757-54c5-4e49-8de6-55b9f35c06fb",
+		"name": "sentinel-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server: sentinel中心",
+			"item": [
+				{
+					"name": "13020: sentinel dashboard管理台",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "producer: 生产者",
+			"item": [
+				{
+					"name": "12010: 提供服务: GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:12010/demo/sentinel/producer/hello/getHello?name=12000: 提供服务: GET",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12010",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"getHello"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "12000: 提供服务: GET"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12000: 提供服务: POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"12000: 提供服务: POST\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:12010/demo/sentinel/producer/hello/postHello",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12010",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"postHello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12001: 提供服务: GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:12011/demo/sentinel/producer/hello/getHello?name=12001: 提供服务: GET",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12011",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"getHello"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "12001: 提供服务: GET"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12002: 提供服务: POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"12002: 提供服务: POST\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:12012/demo/sentinel/producer/hello/postHello",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12012",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"postHello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12002: 提供服务: GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:12012/demo/sentinel/producer/hello/getHello?name=12002: 提供服务: GET",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12012",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"getHello"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "12002: 提供服务: GET"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12002: 提供服务: POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"12002: 提供服务: POST\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:12012/demo/sentinel/producer/hello/postHello",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12012",
+							"path": [
+								"demo",
+								"sentinel",
+								"producer",
+								"hello",
+								"postHello"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
