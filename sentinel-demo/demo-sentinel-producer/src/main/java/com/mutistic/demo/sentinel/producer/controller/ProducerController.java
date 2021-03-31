@@ -20,7 +20,7 @@ public class ProducerController {
   @SentinelResource(value = "/hello/getHello")
   public String getHello(String name) {
     String result = name == null ? "NULL" : name;
-    result = result + ", 成功调用 Nacos生产者 /hello/postHello 方法, 当前路径: "
+    result = result + ", 成功调用普通生产者 /hello/postHello 方法, 当前路径: "
         + webAttribute.getUrlPath();
     System.out.println(result);
     return result;
@@ -30,7 +30,7 @@ public class ProducerController {
   @SentinelResource(value = "/hello/postHello")
   public JSONObject postHello(@RequestBody JSONObject params) {
     JSONObject result = new JSONObject(true);
-    result.put("result", "成功调用 Nacos生产者 /hello/postHello 方法");
+    result.put("result", "成功调用普通生产者 /hello/postHello 方法");
     result.put("path", webAttribute.getUrlPath());
     result.put("params", params);
     System.out.println(result);
