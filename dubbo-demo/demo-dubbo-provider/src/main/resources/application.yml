@@ -1,0 +1,37 @@
+server:
+  port: 12010
+  servlet:
+    context-path: /demo/provider
+
+# spring 配置
+spring:
+  # 项目配置
+  application:
+    name: demo-dubbo-provider
+  #    description: @description@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:13000
+        enabled: true
+        register-enabled: true
+
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.mutistic.demo.provider.api.impl
+  protocols:
+    dubbo:
+      # dubbo 协议
+      name: dubbo
+      # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+      port: 20890
+  registry:
+    address: nacos://127.0.0.1:13000
+    protocol: nacos
+    port: 13000
+    #     挂载到 Spring Cloud 注册中心
+  #    address: spring-cloud://localhost:13000
+  application:
+    qos-enable: false
+    name: demo-dubbo-provider-dubbo

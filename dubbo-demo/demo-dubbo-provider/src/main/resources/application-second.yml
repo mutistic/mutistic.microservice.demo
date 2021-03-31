@@ -1,0 +1,7 @@
+server:
+  port: 12012
+
+dubbo:
+  protocols:
+    dubbo:
+      port: 20892

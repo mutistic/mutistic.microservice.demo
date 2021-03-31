@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <properties>
+    <!-- 基本信息版本 -->
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <verion.demo-dubbo-api>1.0</verion.demo-dubbo-api>
+
+    <!-- <version.spring-cloud-alibaba>2.2.1.RELEASE</version.spring-cloud-alibaba>
+     <version.spring-boot>2.2.7.RELEASE</version.spring-boot>
+ -->
+    <version.spring-cloud>Hoxton.SR9</version.spring-cloud>
+    <version.spring-cloud-alibaba>2.2.5.RELEASE</version.spring-cloud-alibaba>
+    <version.spring-boot>2.3.2.RELEASE</version.spring-boot>
+
+    <version.lombok>1.18.18</version.lombok>
+    <version.fastjson>1.2.75</version.fastjson>
+    <version.commons-lang3>3.12.0</version.commons-lang3>
+  </properties>
+
+  <groupId>com.mutistic.microservice.demo</groupId>
+  <artifactId>demo-dubbo-cloud</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>demo-dubbo-cloud</name>
+  <description>基于dubbo作为RPC框架和nacos作为服务注册中心的spring cloud demo</description>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.2.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <!--<parent>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-build</artifactId>
+    <version>2.3.1.RELEASE</version>
+    <relativePath/>
+  </parent>-->
+
+  <modules>
+    <module>../demo-dubbo-api</module>
+  </modules>
+
+  <!-- spring -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${version.spring-cloud}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${version.spring-cloud-alibaba}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!--<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${version.spring-boot}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>-->
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${version.lombok}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${version.fastjson}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${version.commons-lang3}</version>
+    </dependency>
+  </dependencies>
+
+
+</project>
