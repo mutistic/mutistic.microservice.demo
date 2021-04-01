@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "ecb59259-7a7b-458b-b198-01ef7829c7c8",
+		"name": "dubbo-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server: 服务注册中心",
+			"item": [
+				{
+					"name": "13000: nacos管理界面",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:13000/nacos",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "13000",
+							"path": [
+								"nacos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consumer: 消费者",
+			"item": [
+				{
+					"name": "dubbo: 通过dubbo消费",
+					"item": [
+						{
+							"name": "11000: 消费服务: GET: LoadBalanced",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:11000/demo/consumer/hello/testGet?name=11000: 消费DubboHelloRpc.getHello()服务",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "11000",
+									"path": [
+										"demo",
+										"consumer",
+										"hello",
+										"testGet"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "11000: 消费DubboHelloRpc.getHello()服务"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11000: 消费服务: Post: LoadBalanced",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"11000: 消费消费DubboHelloRpc.postHello()服务\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:11000/demo/consumer/hello/testPost",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "11000",
+									"path": [
+										"demo",
+										"consumer",
+										"hello",
+										"testPost"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
