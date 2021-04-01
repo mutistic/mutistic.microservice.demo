@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "1c7f8d3f-3da6-4769-b525-4a2ae77d5481",
+		"name": "rocketmq-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server: 服务注册中心",
+			"item": [
+				{
+					"name": "13040: rocketmq管理界面",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:13040",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "13040"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "producer: 生产者",
+			"item": [
+				{
+					"name": "12010: 发送消息：topic=getHello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:12010/demo/producer/hello/getHello?name=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12010",
+							"path": [
+								"demo",
+								"producer",
+								"hello",
+								"getHello"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12010: 发送消息：topic=postHello",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"size\": 1,\n    \"name\":\"12000: 提供服务: POST\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:12010/demo/producer/hello/postHello",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "12010",
+							"path": [
+								"demo",
+								"producer",
+								"hello",
+								"postHello"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
