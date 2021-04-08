@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -17,10 +18,10 @@
     <description>nacos config: Nacos 配置管理服务 </description>
   </properties>
 
-  <artifactId>${artifactId}</artifactId>
-  <version>${version}</version>
-  <name>${artifactId}</name>
-  <description>${description}</description>
+  <artifactId>demo-nacos-config</artifactId>
+  <version>1.0</version>
+  <name>demo-nacos-config</name>
+  <description>nacos config: Nacos 配置管理服务</description>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -44,6 +45,12 @@
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>

@@ -7,8 +7,8 @@ server:
 spring:
   # 项目配置
   application:
-    name: @artifactId@
-    version: @version@
+    name: demo-nacos-config
+    version: 1.0
   #    description: @description@
 #  cloud:
 #    nacos:

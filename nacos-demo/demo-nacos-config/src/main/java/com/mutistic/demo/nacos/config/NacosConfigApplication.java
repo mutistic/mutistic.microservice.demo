@@ -19,5 +19,4 @@ public class NacosConfigApplication {
     ConfigurableApplicationContext applicationContext = SpringApplication.run(NacosConfigApplication.class, args);
   }
 
-
 }
