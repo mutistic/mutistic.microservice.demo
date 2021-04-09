@@ -1,5 +1,5 @@
 server:
-  port: 12000
+  port: 12010
   servlet:
     context-path: /demo/eureka/producer
 
@@ -15,7 +15,7 @@ eureka:
   # 指定服务实例
   server:
     ip: 127.0.0.1
-    port: 13000
+    port: 13060
     path: /demo/eureka/server
     eureka: /eureka/
   # 设置实例

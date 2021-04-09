@@ -24,7 +24,6 @@
   <packaging>jar</packaging>
 
   <dependencies>
-    <!-- 使用springMVC注解，引入web依赖包 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>

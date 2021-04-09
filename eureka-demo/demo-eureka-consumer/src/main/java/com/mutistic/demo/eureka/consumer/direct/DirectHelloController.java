@@ -18,7 +18,7 @@ public class DirectHelloController {
 
   @GetMapping("/testGet")
   public JSONObject testGet(String name) {
-    String url = "http://127.0.0.1:12000/demo/eureka/producer/hello/getHello?name=%s";
+    String url = "http://127.0.0.1:12010/demo/eureka/producer/hello/getHello?name=%s";
     url = String.format(url, name);
     String result = restTemplate.getForObject(url, String.class);
 
@@ -34,7 +34,7 @@ public class DirectHelloController {
 
   @PostMapping("/testPost")
   public JSONObject testPost(@RequestBody JSONObject params) {
-    String url = "http://127.0.0.1:12000/demo/eureka/producer/hello/postHello";
+    String url = "http://127.0.0.1:12010/demo/eureka/producer/hello/postHello";
     JSONObject result = restTemplate.postForObject(url, params, JSONObject.class);
 
     JSONObject resultJson = new JSONObject(true);

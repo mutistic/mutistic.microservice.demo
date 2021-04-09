@@ -5,17 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-    <!-- 基本信息版本 -->
-    <java.version>1.8</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <spring-cloud-version>Hoxton.RELEASE</spring-cloud-version>
-    <com-alibaba-cloud.version>2.1.1.RELEASE</com-alibaba-cloud.version>
+    <version.spring-cloud>Hoxton.SR8</version.spring-cloud>
+    <version.spring-boot>2.3.2.RELEASE</version.spring-boot>
 
-    <lombok>1.18.10</lombok>
-    <fastjson>1.2.73</fastjson>
+    <version.lombok>1.18.18</version.lombok>
+    <version.fastjson>1.2.75</version.fastjson>
   </properties>
 
   <groupId>com.mutistic.microservice.demo</groupId>
@@ -28,17 +22,16 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.2.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <version>2.3.2.RELEASE</version>
+    <relativePath/>
   </parent>
 
-  <!-- spring -->
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud-version}</version>
+        <version>${version.spring-cloud}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -49,12 +42,12 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>${lombok}</version>
+      <version>${version.lombok}</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
-      <version>${fastjson}</version>
+      <version>${version.fastjson}</version>
     </dependency>
   </dependencies>
 

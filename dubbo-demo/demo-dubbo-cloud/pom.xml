@@ -7,7 +7,7 @@
   <properties>
     <verion.demo-dubbo-api>1.0</verion.demo-dubbo-api>
 
-    <version.spring-cloud>Hoxton.SR9</version.spring-cloud>
+    <version.spring-cloud>Hoxton.SR8</version.spring-cloud>
     <version.spring-cloud-alibaba>2.2.5.RELEASE</version.spring-cloud-alibaba>
     <version.spring-boot>2.3.2.RELEASE</version.spring-boot>
 
