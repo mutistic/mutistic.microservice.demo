@@ -5,18 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-    <!-- 基本信息版本 -->
-    <java.version>1.8</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-
     <verion.demo-dubbo-api>1.0</verion.demo-dubbo-api>
 
-    <!-- <version.spring-cloud-alibaba>2.2.1.RELEASE</version.spring-cloud-alibaba>
-     <version.spring-boot>2.2.7.RELEASE</version.spring-boot>
- -->
     <version.spring-cloud>Hoxton.SR9</version.spring-cloud>
     <version.spring-cloud-alibaba>2.2.5.RELEASE</version.spring-cloud-alibaba>
     <version.spring-boot>2.3.2.RELEASE</version.spring-boot>
@@ -40,13 +30,6 @@
     <relativePath/>
   </parent>
 
-  <!--<parent>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-build</artifactId>
-    <version>2.3.1.RELEASE</version>
-    <relativePath/>
-  </parent>-->
-
   <modules>
     <module>../demo-dubbo-api</module>
   </modules>
@@ -69,14 +52,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!--<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${version.spring-boot}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
@@ -97,6 +72,5 @@
       <version>${version.commons-lang3}</version>
     </dependency>
   </dependencies>
-
 
 </project>

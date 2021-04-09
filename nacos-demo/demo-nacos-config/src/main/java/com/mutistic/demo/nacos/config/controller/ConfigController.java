@@ -5,6 +5,7 @@ import com.alibaba.nacos.client.config.NacosConfigService;
 import com.alibaba.nacos.common.task.NacosTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.bootstrap.BootstrapApplicationListener;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,6 @@ public class ConfigController {
   private String name;
   @Value("${test.user.age:}")
   private String age;
-
   @Autowired
   private EnvironmentFunction environmentFunction;
 

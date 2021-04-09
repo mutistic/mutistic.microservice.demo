@@ -1,4 +1,4 @@
-package com.mutistic.demo.provider.common;
+package com.mutistic.demo.producer.common;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;

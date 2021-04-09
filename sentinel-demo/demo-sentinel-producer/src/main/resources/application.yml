@@ -9,12 +9,12 @@ spring:
   application:
     name: @artifactId@
     version: @version@
-  #    description: @description@
+    # description: @description@
   cloud:
     #    nacos:
     #      discovery:
     #        server-addr: 127.0.0.1:13000
     sentinel:
       transport:
-#        port: 8080
-        dashboard: localhost:8080
+        port: ${server.port}
+        dashboard: 127.0.0.1:13020

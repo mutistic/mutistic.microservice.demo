@@ -1,15 +1,15 @@
-package com.mutistic.demo.provider;
+package com.mutistic.demo.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-//@RefreshScope
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ProviderApplication {
+public class ProducerApplication {
+
   public static void main(String[] args) {
-    SpringApplication.run(ProviderApplication.class, args);
+    SpringApplication.run(ProducerApplication.class, args);
   }
 
 }

@@ -1,11 +1,14 @@
-package com.mutistic.demo.provider.api.impl;
+package com.mutistic.demo.producer.api.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mutistic.demo.api.DubboHelloRpc;
-import com.mutistic.demo.provider.common.WebAttribute;
+import com.mutistic.demo.producer.common.WebAttribute;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * 通过Dubbo 实现 api 接口及方法
+ */
 @DubboService
 public class DubboHelloRpcImpl implements DubboHelloRpc {
 

@@ -14,14 +14,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "127.0.0.1:8080",
+							"raw": "127.0.0.1:13020",
 							"host": [
 								"127",
 								"0",
 								"0",
 								"1"
 							],
-							"port": "8080"
+							"port": "13020"
 						}
 					},
 					"response": []
@@ -69,7 +69,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"12000: 提供服务: POST\",\n    \"integer\":1,\n    \"double\": 2.2,\n    \"object\":{\"obj\":\"obj\"},\n    \"array\":[{\"arr\":\"arr\"}, \"item\"]\n}",
+							"raw": "{\n    \"name\":\"集群流控测试\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

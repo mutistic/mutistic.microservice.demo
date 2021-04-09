@@ -1,4 +1,4 @@
-package com.mutistic.demo.provider.common;
+package com.mutistic.demo.producer.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.ConfigurableEnvironment;

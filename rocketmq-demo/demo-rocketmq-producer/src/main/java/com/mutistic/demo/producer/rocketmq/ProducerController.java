@@ -20,9 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class ProducerController {
 
-  @Value("${spring.cloud.stream.bindings.output.destination:}")
-  private String topic;
-
   @Autowired
   private WebAttribute webAttribute;
   @Autowired

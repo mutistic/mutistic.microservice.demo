@@ -16,6 +16,7 @@
     <artifactId>demo-nacos-config</artifactId>
     <version>1.0</version>
     <description>nacos config: Nacos 配置管理服务 </description>
+    <version.spring-cloud-starter-bootstrap>3.0.0</version.spring-cloud-starter-bootstrap>
   </properties>
 
   <artifactId>demo-nacos-config</artifactId>
@@ -30,10 +31,11 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <dependency>
+    <!--  <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-bootstrap</artifactId>
-    </dependency>
+      <version>${version.spring-cloud-starter-bootstrap}</version>
+    </dependency> -->
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
@@ -45,12 +47,6 @@
   </dependencies>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
