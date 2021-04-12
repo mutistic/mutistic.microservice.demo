@@ -9,7 +9,7 @@ spring:
   application:
     name: @artifactId@
     version: @version@
-    description: @description@
+    description: "@description@"
   cloud:
     nacos:
       discovery:

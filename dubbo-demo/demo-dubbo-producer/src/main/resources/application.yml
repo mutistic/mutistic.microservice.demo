@@ -1,7 +1,7 @@
 server:
   port: 12010
   servlet:
-    context-path: /demo/provider
+    context-path: /demo/producer
 
 # spring 配置
 spring:
