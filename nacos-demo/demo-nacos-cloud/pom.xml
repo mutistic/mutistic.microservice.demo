@@ -29,7 +29,7 @@
 
     <!-- 常用工具相关版本 -->
     <version.lombok>1.18.18</version.lombok>
-    <version.fastjson>1.2.75</version.fastjson>
+    <version.fastjson>1.2.83</version.fastjson>
     <version.commons-lang3>3.12.0</version.commons-lang3>
   </properties>
 
